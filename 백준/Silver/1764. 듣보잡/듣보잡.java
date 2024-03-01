@@ -7,11 +7,9 @@ public class Main{
         Map<String, Integer> map = new HashMap<>();
         int n = scan.nextInt();
         int m = scan.nextInt();
-        int count = 0;
         ArrayList<String> list = new ArrayList<>();
+        int count = 0;
 
-        String[] r = new String[n];
-        String[] l = new String[m];
         for(int i = 0; i < n; i++) {
             String str = scan.next();
             map.put(str, 0);
