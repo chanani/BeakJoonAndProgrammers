@@ -13,7 +13,8 @@ class Solution {
             for(int j = 0; j < photo[i].length; j++){
                 String pn = photo[i][j];
                 for(int k = 0; k < name.length; k++){
-                    if(name[k].equals(pn)){
+                
+                    if(map.containsKey(pn)){
                         answer[i] += map.get(photo[i][j]);
                         break;
                     }
