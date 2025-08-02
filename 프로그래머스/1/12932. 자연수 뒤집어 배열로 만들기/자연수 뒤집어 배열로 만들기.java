@@ -1,12 +1,10 @@
 class Solution {
     public int[] solution(long n) {
-        int l = String.valueOf(n).length();
-        int[] answer = new int[l];
-        
-        int a = l - 1;
-        for(String x : String.valueOf(n).split("")){
-            answer[a] = Integer.parseInt(x);
-            a--;
+        String str = String.valueOf(n);
+        int[] answer = new int[str.length()];
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = Math.toIntExact(n % 10);
+            n = n / 10;
         }
         
         
