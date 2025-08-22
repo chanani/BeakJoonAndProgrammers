@@ -1,14 +1,9 @@
+import java.util.*;
+import java.util.stream.*;
 class Solution {
     public int solution(int[] absolutes, boolean[] signs) {
-        int answer = 0;
-        for(int i = 0; i < signs.length; i++){
-            if(signs[i]){
-                answer = answer += absolutes[i];
-                continue;
-            }
-            answer = answer -= absolutes[i];
-        
-        }
-        return answer;
+         return IntStream.range(0, absolutes.length)
+                .map(i -> signs[i] ? absolutes[i] : -absolutes[i])
+                .sum();
     }
 }
