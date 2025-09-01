@@ -3,9 +3,6 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String a = sc.next();
-        for(String x : a.split("")){
-            System.out.println(x);
-        }
+        sc.next().chars().forEach(c -> System.out.println((char)c));
     }
 }
