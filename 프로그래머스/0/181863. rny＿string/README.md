@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 66.8 MB, 시간: 0.10 ms
+메모리: 89.4 MB, 시간: 0.49 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 03월 01일 23:44:56
+2025년 09월 05일 22:07:41
 
 ### 문제 설명
 
@@ -65,7 +65,8 @@
 <p>입출력 예 #1</p>
 
 <ul>
-<li><p>예제 1번의 <code>rny_string</code>의 'm'을 "rn"으로 바꾸는 과정을 표로 나타내면 다음과 같습니다.</p>
+<li>예제 1번의 <code>rny_string</code>의 'm'을 "rn"으로 바꾸는 과정을 표로 나타내면 다음과 같습니다.</li>
+</ul>
 <table class="table">
         <thead><tr>
 <th>rny_string</th>
@@ -97,14 +98,13 @@
 <td>e</td>
 </tr>
 </tbody>
-      </table>
-<p>따라서 "rnasterpiece"를 return 합니다.</p></li>
-</ul>
-
+      </table><div class="highlight"><pre class="codehilite"><code>따라서 "rnasterpiece"를 return 합니다.
+</code></pre></div>
 <p>입출력 예 #2</p>
 
 <ul>
-<li><p>예제 2번의 <code>rny_string</code>의 'm'을 "rn"으로 바꾸는 과정을 표로 나타내면 다음과 같습니다.</p>
+<li>예제 2번의 <code>rny_string</code>의 'm'을 "rn"으로 바꾸는 과정을 표로 나타내면 다음과 같습니다.</li>
+</ul>
 <table class="table">
         <thead><tr>
 <th>rny_string</th>
@@ -136,10 +136,8 @@
 <td>s</td>
 </tr>
 </tbody>
-      </table>
-<p>따라서 "prograrnrners"를 return 합니다.</p></li>
-</ul>
-
+      </table><div class="highlight"><pre class="codehilite"><code>따라서 "prograrnrners"를 return 합니다.
+</code></pre></div>
 <p>입출력 예 #3</p>
 
 <ul>
