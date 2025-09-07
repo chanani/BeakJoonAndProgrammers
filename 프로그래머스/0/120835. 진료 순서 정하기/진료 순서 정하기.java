@@ -1,21 +1,22 @@
 import java.util.*;
 class Solution {
     public int[] solution(int[] emergency) {
-        Integer[] sortArr = Arrays.stream(emergency)
-                          .boxed()
-                          .sorted()
-                          .toArray(Integer[]::new);
+        Integer[] sorted = Arrays.stream(emergency)
+                                 .boxed()
+                                 .sorted(Comparator.reverseOrder())
+                                 .toArray(Integer[]::new);
+        
         int[] answer = new int[emergency.length];
-
-        for (int i = 0; i < emergency.length; i++) {
-            int k = 0;
-            for (int j = sortArr.length; j > 0; j--) {
-                if(sortArr[k].equals(emergency[i])){
-                    answer[i] = j;
-                }
-                k++;
-            }
+        
+         Map<Integer, Integer> rankMap = new HashMap<>();
+        for (int i = 0; i < sorted.length; i++) {
+            rankMap.put(sorted[i], i + 1); 
         }
+        
+        for (int i = 0; i < emergency.length; i++) {
+            answer[i] = rankMap.get(emergency[i]);
+        }
+        
         return answer;
     }
 }
