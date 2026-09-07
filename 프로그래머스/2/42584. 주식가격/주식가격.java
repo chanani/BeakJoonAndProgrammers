@@ -1,18 +1,30 @@
 import java.util.*;
+
 class Solution {
     public int[] solution(int[] prices) {
-        int[] answer = new int[prices.length];
-        Queue<Integer> Q = new LinkedList<>();
-        for(int x : prices) Q.offer(x);
-        int index = 0;
-        while(!Q.isEmpty()){
-            int target = Q.poll();
-            for(int x : Q){
-                answer[index]++;
-                if(target > x) break;
+        int n = prices.length;
+        int[] answer = new int[n];
+        Deque<int[]> stack = new ArrayDeque<>();
+        
+        for(int i = 0; i < n; i++) {
+            int price = prices[i];
+            while(!stack.isEmpty() && stack.peek()[0] > price) {
+                int[] cur = stack.pop();
+                int cp = cur[0];
+                int ci = cur[1];
+                answer[ci] = i - ci;
             }
-            index++;
+            
+            stack.push(new int[]{prices[i], i});
         }
+        
+        while(!stack.isEmpty()) {
+            int[] cur = stack.pop();
+            int cp = cur[0];
+            int ci = cur[1];
+            answer[ci] = n - 1- ci;
+        }
+        
         return answer;
     }
 }
